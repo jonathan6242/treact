@@ -2,10 +2,17 @@
 html {
     line-height: 1.5;
 }
+
 body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+.wrapper {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -16,6 +23,31 @@ body {
 main {
     padding: 32px;
     overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn--generic, .landing__email--btn, .nav__links a:last-child, .start__row--btn {
+    transition: all 300ms ease;
+}
+
+.btn--generic:hover, .landing__email--btn:hover, .nav__links a:last-child:hover {
+    background-color: #4d13c0;
+    cursor: pointer;
+}
+.start__row--btn {
+    z-index:10000;
+}
+.start__row--btn:hover {
+    background-color: #ce5555;
+}
+.plan__action--btn {
+    transition: all 300ms ease;
+}
+.plan__action--btn:hover {
+    box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.15);
 }
 
 .container {
@@ -109,7 +141,7 @@ nav .row {
 }
 
 .menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -1355,4 +1387,10 @@ footer {
     color: rgb(100, 21, 255);
     opacity: 0.15;
     transform: matrix(1, 0, 0, 1, -40, 40);
+}
+
+@media (max-width: 750px) {
+    #values__para {
+        text-align: center;
+    }
 }
